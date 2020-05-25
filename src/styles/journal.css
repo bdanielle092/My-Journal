@@ -9,3 +9,9 @@ label{
  flex-direction: column;
  color: purple;
   }
+input.btn {
+    background-color: pink;
+}
+input.btn:active {
+    background-color: antiquewhite;
+}
