@@ -1,3 +1,11 @@
-h1{
-    color: balck;
+body{
+    background-color: plum;
 }
+h1{
+    color: purple;
+}
+label{
+ display: flex;
+ flex-direction: column;
+ color: purple;
+  }

@@ -25,18 +25,23 @@
     <form action="">
         <fieldset>
             <label for="journalEntry">Journal Entry</label>
-            <input type="text" name="journalEntry" id="journalEntry">
+            <textarea name="journalEntry" id="journalEntry" row="4" cols="20"></textarea>
         </fieldset>
     </form>
     <form action="">
         <fieldset>
-            <label for="mood">Mood for the day</label>
-            <select name="mood" id="mood"></select>
+            <label>Mood for the Day</label>
+            <select id="mood">
+                <option value = "1">Happy</option>
+                <option value = "2">Sad</option>
+                <option value = "3">Frustration</option>
+                <option value = "3">Excited</option>
+            </select>
        </fieldset>
     </form>
     <form action="">
         <fieldset>
-            <input type="button" value="recordJournalEntry">
+            <input type="button" value="Record Journal Entry" style="background-color: pink;">
        </fieldset>
     </form>
 </body>
