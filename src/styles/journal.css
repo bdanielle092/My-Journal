@@ -1,0 +1,17 @@
+body{
+    background-color: plum;
+}
+h1{
+    color: purple;
+}
+label{
+ display: flex;
+ flex-direction: column;
+ color: purple;
+  }
+input.btn {
+    background-color: pink;
+}
+input.btn:active {
+    background-color: antiquewhite;
+}
