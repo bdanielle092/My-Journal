@@ -1,3 +1,4 @@
+// an array of journal entries 
 const journalEntries = [
     {
         date: "5-22-20",
@@ -8,7 +9,7 @@ const journalEntries = [
     {
         date: "5-22-20",
         concepts: "Centering an Image",
-        content: "You add class=center in html. Then you can add to if in css",
+        content: "You add class=center in html. Then you can add to it in css",
         mood: "happy"
     },
     {

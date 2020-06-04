@@ -1,4 +1,5 @@
 
+// this is out putting each line of code with string interpolaton
 const makeJournalEntryComponent = (journalEntry) => {
     const journalHTMLRepresentataion = `<section> 
     ${journalEntry.date}<br>
@@ -9,6 +10,8 @@ const makeJournalEntryComponent = (journalEntry) => {
     </section>`
     return journalHTMLRepresentataion
 }
+
+
 
 
 

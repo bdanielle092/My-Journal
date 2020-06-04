@@ -1,4 +1,5 @@
-const journalEntriesfm = () => {
+// this is out putting the journal entires
+const outputJournalEntries = (journalEntries) => {
     
     for (const  journalObject of journalEntries) {
 
@@ -11,3 +12,4 @@ const journalEntriesfm = () => {
         journalArticleElement.innerHTML +=  journalHTML
     }
 }
+outputJournalEntries(journalEntries)
