@@ -1,20 +1,14 @@
+getJournalData().then (
+    () => {
+        outputJournalEntries(journalEntries)
+    }
+)
 
-// this is out putting each line of code with string interpolaton
-const makeJournalEntryComponent = (journalEntry) => {
-    const journalHTMLRepresentataion = `<section> 
-    ${journalEntry.date}<br>
-    ${journalEntry.concepts}<br>
-    ${journalEntry.content}<br>
-    ${journalEntry.mood}
+/*
+    Main application logic that uses the functions and objects
+    defined in the other JavaScript files.
 
-    </section>`
-    return journalHTMLRepresentataion
-}
-
-
-
-
-
-
-
-
+    Change the fake variable names below to what they should be
+    to get the data and display it.
+*/
+// API.getJournalEntries().then(outputJournalEntries(journalEntries))
