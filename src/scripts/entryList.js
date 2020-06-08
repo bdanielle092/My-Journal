@@ -1,7 +1,7 @@
 // this is out putting the journal entires
-const outputJournalEntries = (journalEntries) => {
+const renderJournalEntries = (journalEntries) => {
     
-    for (const  journalObject of journalEntries) {
+    for (const journalObject of journalEntries) {
 
         
         const journalHTML = makeJournalEntryComponent(journalObject)
@@ -12,4 +12,4 @@ const outputJournalEntries = (journalEntries) => {
         journalArticleElement.innerHTML +=  journalHTML
     }
 }
-outputJournalEntries(journalEntries)
+// renderJournalEntries(journalEntries)

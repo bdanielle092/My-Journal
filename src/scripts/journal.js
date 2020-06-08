@@ -1,8 +1,8 @@
-getJournalData().then (
-    () => {
-        outputJournalEntries(journalEntries)
-    }
-)
+// getJournalData().then (
+//     () => {
+//         renderJournalEntries(journalEntries)
+//     }
+// )
 
 /*
     Main application logic that uses the functions and objects
@@ -11,4 +11,5 @@ getJournalData().then (
     Change the fake variable names below to what they should be
     to get the data and display it.
 */
-// API.getJournalEntries().then(outputJournalEntries(journalEntries))
+API.getJournalEntries()
+.then((response) => renderJournalEntries(response))
