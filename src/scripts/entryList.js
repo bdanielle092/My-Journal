@@ -1,4 +1,7 @@
 // this is out putting the journal entires
+
+import makeJournalEntryComponent from "./entryComponent.js"
+
 const renderJournalEntries = (journalEntries) => {
     
     for (const journalObject of journalEntries) {
@@ -12,4 +15,5 @@ const renderJournalEntries = (journalEntries) => {
         journalArticleElement.innerHTML +=  journalHTML
     }
 }
-// renderJournalEntries(journalEntries)
+
+export default renderJournalEntries;

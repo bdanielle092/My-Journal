@@ -11,6 +11,8 @@ const makeJournalEntryComponent = (journalEntry) => {
     return journalHTMLRepresentataion
 }
 
+export default makeJournalEntryComponent;
+
 
 
 
