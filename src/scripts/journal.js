@@ -7,8 +7,15 @@
 */
 import API from "./data.js"
 import renderJournalEntries from "./entryList.js"
+import createjournalEntry from "./createEntry.js"
 
 
 API.getJournalEntries()
 .then((response) => renderJournalEntries(response))
+
+document.querySelector("#save").addEventListener("click", event => {
+    console.log("hello")
+});
+
+
 
