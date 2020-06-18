@@ -3,7 +3,7 @@
 import makeJournalEntryComponent from "./entryComponent.js"
 
 const renderJournalEntries = (journalEntries) => {
-    
+    console.log("test")
     for (const journalObject of journalEntries) {
 
         

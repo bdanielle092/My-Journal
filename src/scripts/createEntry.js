@@ -1,15 +1,15 @@
 // this is a factory function 
-const createjournalEntry = (date, concepts, entry, mood) => {
-    newJournalEntry = {
+// getting these four things
+const createjournalEntry = (date, conceptsCovered, entry, mood) => {
+     const newJournalEntry = {
         // pulling from id in html and making it the value 
-        date: document.querySelector("#journalDate").value,
-        concepts: document.querySelector("#conceptscovered").value ,
-        entry: document.querySelector("#journalEntry").value,
-        mood: document.querySelector("#mood").value
+        date: date,
+        conceptsCovered: conceptsCovered ,
+        entry: entry,
+        mood: mood
     }
     return journalEntry    
 }
 
 export default createjournalEntry
-
 
