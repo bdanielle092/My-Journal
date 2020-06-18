@@ -14,7 +14,7 @@ API.getJournalEntries()
 .then((response) => renderJournalEntries(response))
 
 document.querySelector("#save").addEventListener("click", event => {
-    console.log("hello")
+    createjournalEntry()
 });
 
 
