@@ -1,25 +1,28 @@
 {
-"entries": [
+  "entries": [
     {
-        "id": 1,
-        "date": "5-22-20",
-        "concepts": "Terminal",
-        "content": "I learned how to use the terminal",
-        "mood": "Frustration"
+      "id": 1,
+      "date": "5-22-20",
+      "concepts": "Terminal",
+      "content": "I learned how to use the terminal",
+      "mood": "Frustration"
     },
     {
-        "id": 2,
-        "date": "5-22-20",
-        "concepts": "Centering an Image",
-        "content": "You add class=center in html. Then you can add to it in css",
-        "mood": "happy"
+      "id": 2,
+      "date": "5-22-20",
+      "concepts": "Centering an Image",
+      "content": "You add class=center in html. Then you can add to it in css",
+      "mood": "happy"
     },
     {
-        "id": 3,
-        "date": "5-30-20",
-        "concepts": "Cards",
-        "content": "I learned how to make a card to store info",
-        "mood": "Excited"
+      "id": 3,
+      "date": "5-30-20",
+      "concepts": "Cards",
+      "content": "I learned how to make a card to store info",
+      "mood": "Excited"
+    },
+    {
+      "id": 4
     }
-]
+  ]
 }
