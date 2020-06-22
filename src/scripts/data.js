@@ -1,5 +1,5 @@
 const API = {
-//    getting all the entriest
+//    getting all the entries
     getJournalEntries: () => {
         return fetch("http://localhost:8088/entries")
         // this is parsing the response to json for uses on the dom
@@ -15,8 +15,28 @@ const API = {
                 },
                 body: JSON.stringify(newEntryObject)
             })
-        }
+        },
+        // this is deleting entries
+        deleteJournalEntry: (id) => {
+            return fetch(`http://localhost:8088/entries/${id}`, {
+                method: "Delete",
+
+        })
+        .then(response => response.json())
+    },
+    // this is editing entries
+    editJournalEntry: (id) => {
+        return fetch(`http://localhost:8088/entries/${id}`, {
+            method: "POST",
+    })
+    .then(response => response.json())
+
+   }
 }
+
+
+    
+
 
 
 

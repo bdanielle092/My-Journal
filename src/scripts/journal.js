@@ -34,4 +34,40 @@ document.querySelector("#save").addEventListener("click", event => {
             })
              }
         })
+        // this radio buttom is running through each mood 
+        let radioButton = document.getElementsByName(mood)
+            radioButton.forEach(button => {
+                button.addEventListener("click", event => {
+            const mood = event.target.value
+            
+        })
+    })
+  
+      
+    //   this is the delete button
+    // the querySelector is getting info from the entryLog and deleting 
+       document.querySelector(".entryLog").addEventListener("click", event => {
+        //    this is targeting the delete button in entryComponent
+             if(event.target.id.startsWith("deleteEntry--")){
+                //  this look at this id and divide left and right  delete entry and the second is the id number
+                  const journalEntrytoDelete = event.target.id.split("--")[1];
+                //   this getting info from the api deleteJournalEntry
+                  API.deleteJournalEntry(journalEntrytoDelete)
+                //   this is getting info from the api getJournalEntries
+                  .then(() => API.getJournalEntries())
+                //   this is getting info entryList
+                  .then(response => renderJournalEntries(response))
+
+              }else if(event.target.id.startsWith("editEntry--")){
+                  const journalEntrytoEdit = event.target.id.split("--")[1]
+                  API.getSingleJournalEntry(journalEntrytoEdit)
+                  .then(() => API.getJournalEntries())
+
+                  .then(response => upDateFormFields(response))
+              }
+       })
+    
+        
+            
+
 

@@ -31,7 +31,7 @@
             <select id="mood">
                 <option value = "Happy">Happy</option>
                 <option value = "Sad">Sad</option>
-                <option value = "Frustration">Frustration</option>
+                <option value = "Frustrated">Frustrated</option>
                 <option value = "Excited">Excited</option>
             </select>
        </fieldset>
@@ -40,9 +40,31 @@
             <input type="button" value="Record Journal Entry" class="btn" id="save">
        </fieldset>
     </form>
+    
+    <form>
+        <fieldset id="byMood">
+            <legend>Journal Entries by Mood</legend>
+                <input type="radio" id="Happy" name="mood" value="Happy">
+                <label for="Happy">Happy</label>
+    
+                <input type="radio" id="Sad" name="mood" value="Sad">
+                <label for="Sad">Sad</label>
+    
+                <input type="radio" id="Frustrated" name="mood" value="Frustrated ">
+                <label for="Frustrated">"Frustrated</label>
+    
+                <input type="radio" id="Excited" name="mood" value="Excited">
+                <label for="Excited">Excited</label>
+
+                <input type="radio" id="showAll" name="mood" value="showAll">
+                <label for="showAll">Show All Entries</label>
+        </fieldset>
+    </form>
     <article class="entryLog">
 
     </article>
+ 
+   
    
     <script type="module" src="scripts/journal.js"></script>
 </body>

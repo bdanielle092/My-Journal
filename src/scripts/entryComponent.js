@@ -5,13 +5,15 @@ const makeJournalEntryComponent = (journalEntry) => {
     ${journalEntry.date}<br>
     ${journalEntry.concepts}<br>
     ${journalEntry.content}<br>
-    ${journalEntry.mood}
-
+    ${journalEntry.mood}<br>
+    <button id="deleteEntry--${journalEntry.id}">Delete</button>
+    <button id="editEntry--${journalEntry.id}">Edit</button>
     </section>`
     return journalHTMLRepresentataion
 }
 
 export default makeJournalEntryComponent;
+// the button above it the delete button
 
 
 

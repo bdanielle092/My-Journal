@@ -5,7 +5,7 @@
       "date": "5-22-20",
       "concepts": "Terminal",
       "content": "I learned how to use the terminal",
-      "mood": "Frustration"
+      "mood": "Frustrated"
     },
     {
       "id": 2,
@@ -24,8 +24,8 @@
     {
       "date": "2020-06-19",
       "concepts": "api",
-      "content": "I learned api post.",
-      "mood": "Frustration",
+      "content": "I learned about api Post.",
+      "mood": "Frustrated",
       "id": 4
     }
   ]
