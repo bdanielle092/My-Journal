@@ -25,13 +25,24 @@ const API = {
         .then(response => response.json())
     },
     // this is editing entries
-    editJournalEntry: (entry, entryValue) => {
+         editJournalEntry: (entryValue) => {
+            //  creating the editing object
+             let editingObject = {
+                 "date": document.querySelector("#journalDate").value,
+                 "concepts": document.querySelector("#conceptsCovered").value,
+                 "content": document.querySelector("#journalEntry").value,
+                 "mood": document.querySelector("#mood").value
+             }
         return fetch(`http://localhost:8088/entries/${entryValue}`, {
             method: "PUT",
                 headers: {
                     "Content-Type": "application/json"
                 },
-                body: JSON.stringify(entry)
+                body: JSON.stringify(editingObject)
+                
+            }).then(() => {
+                // clears the hidden value
+                document.querySelector("#entry").value = ""
             })
         },
     

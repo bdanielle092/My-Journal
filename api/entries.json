@@ -15,39 +15,32 @@
       "mood": "happy"
     },
     {
-      "id": 3,
       "date": "2020-05-30",
       "concepts": "Cards",
       "content": "I learned how to make a card to store info",
-      "mood": "Excited"
+      "mood": "Frustrated",
+      "id": 3
     },
     {
-      "date": "2020-06-22",
-      "concepts": "sadfd",
-      "content": "adsf",
+      "date": "2020-06-23",
+      "concepts": "delete",
+      "content": "edit",
       "mood": "Excited",
       "id": 4
     },
     {
-      "date": "2020-06-22",
-      "concepts": "api",
-      "content": "api",
+      "date": "2020-06-23",
+      "concepts": "edit",
+      "content": "edit",
       "mood": "Excited",
       "id": 5
     },
     {
-      "date": "2020-06-22",
-      "concepts": "api",
-      "content": "api",
+      "date": "2020-06-23",
+      "concepts": "css",
+      "content": "learned about css",
       "mood": "Excited",
       "id": 6
-    },
-    {
-      "date": "2020-06-11",
-      "concepts": "Centering an Image",
-      "content": "You add class=center in html. Then you can add to it in css",
-      "mood": "Happy",
-      "id": 7
     }
   ]
 }
