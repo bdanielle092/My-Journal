@@ -11,6 +11,7 @@ API.getJournalEntries()
 
 // this is my addEventListener for my button
 document.querySelector("#save").addEventListener("click", event => {
+  // this is the hidden input 
     let entryValue = document.querySelector("#entry").value
            // putting info from html
             let date = document.querySelector("#journalDate").value
@@ -55,10 +56,11 @@ document.querySelector("#save").addEventListener("click", event => {
           
       })
   })
-  //    const filterByMood = moods.filter(mood => {
-           
-  //    })
-            })
+    //  const filterByMood = moods.filter(mood => {
+    //        
+    //        }
+    //  })
+    //         })
            
       
     //   this is the delete button
@@ -77,7 +79,8 @@ document.querySelector("#save").addEventListener("click", event => {
             //  editing the journal entries
               }else if(event.target.id.startsWith("editEntry--")){
                   const journalEntrytoEdit = event.target.id.split("--")[1];
-                  // this is filling the form with the object info when you hit edit
+                  // this is filling the form with the entryobject info when you hit edit. 
+                  // The #date,concepts,entry,mood, entry is coming from the ids in html
                
                 API.getSingleJournalEntry(journalEntrytoEdit).then((entryObject => {
                      document.querySelector("#journalDate").value = entryObject.date
