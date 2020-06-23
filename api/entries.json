@@ -2,31 +2,52 @@
   "entries": [
     {
       "id": 1,
-      "date": "5-22-20",
+      "date": "2020-05-22",
       "concepts": "Terminal",
       "content": "I learned how to use the terminal",
       "mood": "Frustrated"
     },
     {
       "id": 2,
-      "date": "5-22-20",
+      "date": "2020-05-22",
       "concepts": "Centering an Image",
       "content": "You add class=center in html. Then you can add to it in css",
       "mood": "happy"
     },
     {
       "id": 3,
-      "date": "5-30-20",
+      "date": "2020-05-30",
       "concepts": "Cards",
       "content": "I learned how to make a card to store info",
       "mood": "Excited"
     },
     {
-      "date": "2020-06-19",
-      "concepts": "api",
-      "content": "I learned about api Post.",
-      "mood": "Frustrated",
+      "date": "2020-06-22",
+      "concepts": "sadfd",
+      "content": "adsf",
+      "mood": "Excited",
       "id": 4
+    },
+    {
+      "date": "2020-06-22",
+      "concepts": "api",
+      "content": "api",
+      "mood": "Excited",
+      "id": 5
+    },
+    {
+      "date": "2020-06-22",
+      "concepts": "api",
+      "content": "api",
+      "mood": "Excited",
+      "id": 6
+    },
+    {
+      "date": "2020-06-11",
+      "concepts": "Centering an Image",
+      "content": "You add class=center in html. Then you can add to it in css",
+      "mood": "Happy",
+      "id": 7
     }
   ]
 }

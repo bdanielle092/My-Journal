@@ -25,19 +25,23 @@ const API = {
         .then(response => response.json())
     },
     // this is editing entries
-    editJournalEntry: (id) => {
-        return fetch(`http://localhost:8088/entries/${id}`, {
-            method: "POST",
-    })
-    .then(response => response.json())
-
-   }
-}
-
-
+    editJournalEntry: (entry, entryValue) => {
+        return fetch(`http://localhost:8088/entries/${entryValue}`, {
+            method: "PUT",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(entry)
+            })
+        },
     
-
-
-
+        // this is editing a single entry
+       getSingleJournalEntry: (id) => {
+        return fetch(`http://localhost:8088/entries/${id}`)
+            .then(response => response.json()) 
+       
+       }
+    
+}
 
 export default API

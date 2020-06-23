@@ -11,14 +11,24 @@ API.getJournalEntries()
 
 // this is my addEventListener for my button
 document.querySelector("#save").addEventListener("click", event => {
-       
+    let entryValue = document.querySelector("#entry").value
            // putting info from html
             let date = document.querySelector("#journalDate").value
             let conceptsCovered = document.querySelector("#conceptsCovered").value 
             let entry = document.querySelector("#journalEntry").value
             let mood = document.querySelector("#mood").value
+            // if all boxes are not filled then alert will pop up
             if(date === "" || conceptsCovered === "" || entry === "" || mood === ""){
                 alert("Please complete fields")
+                // if entry is new post
+             }else if( entryValue === ""){
+                let newEntry = createjournalEntry(date, conceptsCovered, entry, mood)
+                API.saveJournalEntry(newEntry)
+            //  if entry is edited post changes
+             }else if(entryValue !== ""){
+                let editEntry = createjournalEntry(date, conceptsCovered, entry, mood)
+                API.editJournalEntry(editEntry, entryValue)
+            
              }else {
             // getting info from newEntryObj
             let newEntryObj = createjournalEntry(date, conceptsCovered, entry, mood)  
@@ -42,7 +52,9 @@ document.querySelector("#save").addEventListener("click", event => {
             
         })
     })
-  
+    //    const filterByMood = moods.filter(mood => {
+             
+    //    })
       
     //   this is the delete button
     // the querySelector is getting info from the entryLog and deleting 
@@ -57,13 +69,23 @@ document.querySelector("#save").addEventListener("click", event => {
                   .then(() => API.getJournalEntries())
                 //   this is getting info entryList
                   .then(response => renderJournalEntries(response))
-
+            //  editing the journal entries
               }else if(event.target.id.startsWith("editEntry--")){
-                  const journalEntrytoEdit = event.target.id.split("--")[1]
-                  API.getSingleJournalEntry(journalEntrytoEdit)
+                  const journalEntrytoEdit = event.target.id.split("--")[1];
+               
+                API.getSingleJournalEntry(journalEntrytoEdit).then((entryObject => {
+                     document.querySelector("#journalDate").value = entryObject.date
+                     document.querySelector("#conceptsCovered").value = entryObject.concepts
+                     document.querySelector("#journalEntry").value = entryObject.content
+                     document.querySelector("#mood").value = entryObject.mood
+                     document.querySelector("#entry").value = entryObject.id
+                }))
+
+               
+               
                   .then(() => API.getJournalEntries())
 
-                  .then(response => upDateFormFields(response))
+                  .then(response => renderJournalEntries(response))
               }
        })
     
