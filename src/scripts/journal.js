@@ -3,6 +3,8 @@ import API from "./data.js"
 import renderJournalEntries from "./entryList.js"
 import createjournalEntry from "./createEntry.js"
 
+
+
 // 
 API.getJournalEntries()
 .then(response => {
@@ -11,6 +13,7 @@ API.getJournalEntries()
 
 // this is my addEventListener for my button
 document.querySelector("#save").addEventListener("click", event => {
+
   // this is the hidden input 
     let entryValue = document.querySelector("#entry").value
            // putting info from html
@@ -49,18 +52,28 @@ document.querySelector("#save").addEventListener("click", event => {
            }
       }
       // this radio buttom is running through each mood 
-      let radioButton = document.getElementsByName(mood)
-          radioButton.forEach(button => {
-              button.addEventListener("click", event => {
-          const mood = event.target.value
-          
+     
+
+      document.querySelector("#Happy").addEventListener("click", event => {
+            console.log("Is this going to work")
       })
-  })
-    //  const filterByMood = moods.filter(mood => {
-    //        
-    //        }
-    //  })
-    //         })
+//          moodForm.addEventListener("click", event => {
+//            console.log("click button")
+//           let filterMood
+//           document.getElementsByName("mood").forEach(() => {
+//             filterMood = event.target.value
+//             console.log("test", filterMood)
+//           })
+//          })
+      
+        
+//  filterMood()
+
+ 
+
+
+
+        
            
       
     //   this is the delete button
@@ -98,8 +111,4 @@ document.querySelector("#save").addEventListener("click", event => {
                   .then(response => renderJournalEntries(response))
               }
        })
-    
-        
-            
-
-
+})
