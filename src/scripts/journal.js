@@ -51,31 +51,7 @@ document.querySelector("#save").addEventListener("click", event => {
           })
            }
       }
-      // this radio buttom is running through each mood 
-     
-
-      document.querySelector("#Happy").addEventListener("click", event => {
-            console.log("Is this going to work")
-      })
-//          moodForm.addEventListener("click", event => {
-//            console.log("click button")
-//           let filterMood
-//           document.getElementsByName("mood").forEach(() => {
-//             filterMood = event.target.value
-//             console.log("test", filterMood)
-//           })
-//          })
-      
-        
-//  filterMood()
-
  
-
-
-
-        
-           
-      
     //   this is the delete button
     // the querySelector is getting info from the entryLog and deleting 
        document.querySelector(".entryLog").addEventListener("click", event => {
@@ -112,3 +88,35 @@ document.querySelector("#save").addEventListener("click", event => {
               }
        })
 })
+
+    //  this radio buttom is running through each mood
+    // this pulls info from the name in html
+            document.getElementsByName("mood").forEach((moods) => { 
+              // this is the button
+              moods.addEventListener("click", event => {
+              const moodFilter = event.target.value
+              // this get all the journal entries
+              API.getJournalEntries().then( (journalMood) => 
+               
+                entryMood(moodFilter, journalMood)
+              ).then( (entryByMood) => { 
+                renderJournalEntries(entryByMood)
+              })
+                
+            })
+            // this filters all the moods
+      })
+      const entryMood = ( moodFilter, journalMood) => { 
+      const filtered = journalMood.filter(moodEntry => {
+        if(moodFilter === "showAll"){
+           return moodEntry
+        }else {
+        return moodFilter === moodEntry.mood
+        }
+      })
+
+    return filtered
+    }
+    
+  
+
