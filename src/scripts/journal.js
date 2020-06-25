@@ -5,7 +5,7 @@ import createjournalEntry from "./createEntry.js"
 
 
 
-// 
+
 API.getJournalEntries()
 .then(response => {
     renderJournalEntries(response)
@@ -28,6 +28,7 @@ document.querySelector("#save").addEventListener("click", event => {
               document.querySelector("#journalDate").value =""
               document.querySelector("#conceptsCovered").value =""
               document.querySelector("#journalEntry").value = ""
+              // this put the mood back to Happy
               document.querySelector("#mood").value = "Happy"
             
             }else {
@@ -117,6 +118,11 @@ document.querySelector("#save").addEventListener("click", event => {
 
     return filtered
     }
-    
-  
+    // This is the search button
+   const searchInput = document.querySelector("#search")
+   searchInput.addEventListener('Keypress', event)
+       if(search === "enter"){
+          const searchTerm = event.target.value
+       }else {
 
+       }
