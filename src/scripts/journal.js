@@ -40,12 +40,12 @@ document.querySelector("#save").addEventListener("click", event => {
           }else {
           // getting info from newEntryObj
           let newEntryObj = createjournalEntry(date, conceptsCovered, entry, mood)  
-          // calling saveJournalEntry 
+          // calling saveJournalEntry and saving the entries
           API.saveJournalEntry(newEntryObj).then ( () => {
-              // calling the info from the api and getJournalEntries
+              //then its calling the info from the api and getJournalEntries 
               return API.getJournalEntries ()
 
-              // getting info from entry component from journalEntry
+              // then its getting info from entry component from journalEntry
           }).then ((apiJournalEntry) => {
               // getting info from entryList and renderJournalEntries
               return renderJournalEntries(apiJournalEntry)
@@ -119,10 +119,14 @@ document.querySelector("#save").addEventListener("click", event => {
     return filtered
     }
     // This is the search button
-   const searchInput = document.querySelector("#search")
-   searchInput.addEventListener('Keypress', event)
+   const searchBar = document.querySelector("#search")
+   searchBar.addEventListener('Keypress', event)
        if(search === "enter"){
-          const searchTerm = event.target.value
+        const searchInput = getJournalEntries().forEach(journalEntry => {
+              for(value of Object.value(journalEntry)){
+                
+              }
+         })
        }else {
 
        }
