@@ -11,14 +11,15 @@
 <body>
     <h1>Daily Journal</h1>
     <form action="">
-        <fieldset>
+        <input type="hidden" id="entry" value="">
+            <fieldset>
             <label for="journalDate">Date of entry</label>
             <input type="date" name="journalDate" id="journalDate">
         </fieldset>
   
         <fieldset>
             <label for="conceptsCovered">Concepts covered</label>
-            <input type="text" name="conceptscovered" id="conceptscovered">
+            <input type="text" name="conceptsCovered" id="conceptsCovered">
         </fieldset>
    
          <fieldset>
@@ -29,17 +30,51 @@
         <fieldset>
             <label>Mood for the Day</label>
             <select id="mood">
-                <option value = "1">Happy</option>
-                <option value = "2">Sad</option>
-                <option value = "3">Frustration</option>
-                <option value = "4">Excited</option>
+                <option value = "Happy">Happy</option>
+                <option value = "Sad">Sad</option>
+                <option value = "Frustrated">Frustrated</option>
+                <option value = "Excited">Excited</option>
             </select>
        </fieldset>
    
        <fieldset>
-            <input type="button" value="Record Journal Entry" class="btn">
+            <input type="button" value="Record Journal Entry" class="btn" id="save">
        </fieldset>
     </form>
+    
+    <form>
+        <fieldset id="byMood">
+            <legend>Journal Entries by Mood</legend>
+                <input type="radio" id="Happy" name="mood" value="Happy">
+                <label for="Happy">Happy</label>
+    
+                <input type="radio" id="Sad" name="mood" value="Sad">
+                <label for="Sad">Sad</label>
+    
+                <input type="radio" id="Frustrated" name="mood" value="Frustrated">
+                <label for="Frustrated">Frustrated</label>
+    
+                <input type="radio" id="Excited" name="mood" value="Excited">
+                <label for="Excited">Excited</label>
+
+                <input type="radio" id="showAll" name="mood" value="showAll">
+                <label for="showAll">Show All Entries</label>
+        </fieldset>
+    </form>
+    <form>
+        <fieldset>
+            <legend>Search Journal Entries</legend>
+                <input type="text" placeholder="Search.." name="search" id="search"> 
+            </fieldset>
+    </form>
+    <article class="filterLog"></article>
+    <article class="entryLog">
+
+    </article>
+ 
+   
+   
+    <script type="module" src="scripts/journal.js"></script>
 </body>
-<script src="../src/scripts/journal.js"></script>
+
 </html>

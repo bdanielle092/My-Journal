@@ -1,0 +1,53 @@
+{
+  "entries": [
+    {
+      "id": 1,
+      "date": "2020-05-22",
+      "concepts": "Terminal",
+      "content": "I learned how to use the terminal",
+      "mood": "Frustrated"
+    },
+    {
+      "id": 2,
+      "date": "2020-05-22",
+      "concepts": "Centering an Image",
+      "content": "You add class=center in html. Then you can add to it in css",
+      "mood": "Happy"
+    },
+    {
+      "date": "2020-05-30",
+      "concepts": "Cards",
+      "content": "I learned how to make a card to store info",
+      "mood": "Frustrated",
+      "id": 3
+    },
+    {
+      "date": "2020-06-23",
+      "concepts": "delete",
+      "content": "edit",
+      "mood": "Excited",
+      "id": 4
+    },
+    {
+      "date": "2020-06-23",
+      "concepts": "edit",
+      "content": "edit",
+      "mood": "Excited",
+      "id": 5
+    },
+    {
+      "date": "2020-06-23",
+      "concepts": "css",
+      "content": "learned about css",
+      "mood": "Excited",
+      "id": 6
+    },
+    {
+      "date": "2020-06-27",
+      "concepts": "search",
+      "content": "Learning about search bar",
+      "mood": "Excited",
+      "id": 7
+    }
+  ]
+}
