@@ -41,6 +41,13 @@
       "content": "learned about css",
       "mood": "Excited",
       "id": 6
+    },
+    {
+      "date": "2020-06-27",
+      "concepts": "search",
+      "content": "Learning about search bar",
+      "mood": "Excited",
+      "id": 7
     }
   ]
 }

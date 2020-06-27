@@ -120,13 +120,24 @@ document.querySelector("#save").addEventListener("click", event => {
     }
     // This is the search button
    const searchBar = document.querySelector("#search")
-   searchBar.addEventListener('Keypress', event)
-       if(search === "enter"){
-        const searchInput = getJournalEntries().forEach(journalEntry => {
-              for(value of Object.value(journalEntry)){
-                
-              }
+   const filterEntry = document.querySelector("#filterLog")
+   searchBar.addEventListener('keypress', event => {
+     const searchInput = event.target.value 
+     API.getJournalEntries().then(entries => {
+       if(event.key === "Enter"){
+         const filteredEntries = entries.filter(entry => {
+            entry.content.includes(searchInput)
+            filterEntry.innerHTML += `<div>Test</div>`
+           
+            
          })
-       }else {
-
        }
+     })
+    })
+   
+ 
+
+
+    
+      
+   
