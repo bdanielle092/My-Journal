@@ -48,6 +48,13 @@
       "content": "Learning about search bar",
       "mood": "Excited",
       "id": 7
+    },
+    {
+      "date": "2020-06-28",
+      "concepts": "search button",
+      "content": "I am learning about my search button",
+      "mood": "Excited",
+      "id": 8
     }
   ]
 }
