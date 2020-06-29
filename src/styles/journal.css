@@ -15,7 +15,7 @@ input.btn {
 input.btn:active {
     background-color: antiquewhite;
 }
-/* fieldset.byMood{
-    display: flex;
-    flex-direction: row;
-} */
+.hidden{
+    display: none;
+    
+}

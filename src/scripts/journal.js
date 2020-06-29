@@ -11,7 +11,7 @@ API.getJournalEntries()
     renderJournalEntries(response)
 })
 
-// this is my addEventListener for my button
+// this is my addEventListener for my save button
 document.querySelector("#save").addEventListener("click", event => {
 
   // this is the hidden input 
@@ -89,7 +89,7 @@ document.querySelector("#save").addEventListener("click", event => {
               }
        })
 })
-
+    //  this is the filter buttons
     //  this radio buttom is running through each mood
     // this pulls info from the name in html
             document.getElementsByName("mood").forEach((moods) => { 
@@ -121,28 +121,25 @@ document.querySelector("#save").addEventListener("click", event => {
     // This is the search button
     const searchBar = document.querySelector("#search")
     const filterEntry = document.querySelector(".filterLog")
-    searchBar.addEventListener('keyup', event => {
-      event.preventDefault()
+    const entryLog = document.querySelector(".entryLog")
+    searchBar.addEventListener('keypress', event => {
+      // it targeting every key you type in the search bar
       const input = event.target.value
       API.getJournalEntries().then(entries => {
         if (event.key === "Enter") {
+            entryLog.classList.add("hidden")
           const filteredEntries = entries.filter(entry => {
             return entry.content.includes(input)
           })
           filteredEntries.forEach(entry => {
             filterEntry.innerHTML += `
+            <div>${entry.date}</div>
             <div>${entry.concepts}</div>
             <div>${entry.content}</div>
+            <div>${entry.mood}</div>
             <br/>
             `
           })
         }
       })
     })
-   
- 
-
-
-    
-      
-   
