@@ -13,7 +13,7 @@ const makeJournalEntryComponent = (journalEntry) => {
 }
 
 export default makeJournalEntryComponent;
-// the button above it the delete button
+// the button above it the delete and edit button
 
 
 
