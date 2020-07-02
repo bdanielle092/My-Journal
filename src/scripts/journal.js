@@ -138,7 +138,14 @@ document.querySelector("#save").addEventListener("click", event => {
             <div>${entry.content}</div>
             <div>${entry.mood}</div>
             <br/>
+            <button id="deleteEntry--${journalEntry.id}">Delete</button>
+            <button id="editEntry--${journalEntry.id}">Edit</button>
             `
+          })
+        }else {
+          API.getJournalEntries()
+          .then(response => {
+        renderJournalEntries(response)
           })
         }
       })
